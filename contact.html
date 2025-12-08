@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PawPals Pet Supply - Contact</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <!-- ========== HEADER NAVIGATION ========== -->
+    <header class="header">
+        <div class="header-container">
+            <a href="index.html" class="logo">
+                <span class="paw-icon">🐾</span> PawPals
+            </a>
+            <button class="hamburger" aria-label="Toggle menu">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+            <nav class="nav">
+                <ul class="nav-list">
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="products.html">Products</a></li>
+                    <li><a href="about.html">About Us</a></li>
+                    <li><a href="contact.html" class="active">Contact</a></li>
+                    <li><a href="login.html">Login</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <!-- ========== PAGE HEADER ========== -->
+    <section class="page-header">
+        <h1>Contact Us <span class="paw-icon">🐾</span></h1>
+        <p>We would love to hear from you!</p>
+    </section>
+
+    <!-- ========== CONTACT SECTION ========== -->
+    <section class="contact-section">
+        <div class="contact-info">
+            <h2>Get In Touch 🐕</h2>
+            <p>Have questions about our products? Need help with an order? Or just want to share a cute photo of your pet? We are here for you!</p>
+            
+            <div class="contact-details">
+                <div class="contact-item">
+                    <span class="contact-icon">📍</span>
+                    <div>
+                        <h4>Visit Us</h4>
+                        <p>123 Pet Street, Furryville, CA 90210</p>
+                    </div>
+                </div>
+                <div class="contact-item">
+                    <span class="contact-icon">📞</span>
+                    <div>
+                        <h4>Call Us</h4>
+                        <p>(555) 123-PAWS</p>
+                    </div>
+                </div>
+                <div class="contact-item">
+                    <span class="contact-icon">✉️</span>
+                    <div>
+                        <h4>Email Us</h4>
+                        <p>hello@pawpals.com</p>
+                    </div>
+                </div>
+                <div class="contact-item">
+                    <span class="contact-icon">🕐</span>
+                    <div>
+                        <h4>Hours</h4>
+                        <p>Monday - Friday: 9am - 6pm<br>Saturday: 10am - 4pm</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="contact-form-container">
+            <h2>Send Us a Message 💌</h2>
+            <form id="contactForm" class="contact-form">
+                <div class="form-group">
+                    <label for="contactName">Your Name</label>
+                    <input type="text" id="contactName" name="name" required>
+                    <span class="error-message" id="nameError"></span>
+                </div>
+                <div class="form-group">
+                    <label for="contactEmail">Email Address</label>
+                    <input type="email" id="contactEmail" name="email" required>
+                    <span class="error-message" id="emailError"></span>
+                </div>
+                <div class="form-group">
+                    <label for="contactMessage">Your Message</label>
+                    <textarea id="contactMessage" name="message" rows="5" required></textarea>
+                    <span class="error-message" id="messageError"></span>
+                </div>
+                <button type="submit" class="btn btn-primary">Send Message 🐾</button>
+                <div id="contactSuccess" class="success-message"></div>
+            </form>
+        </div>
+    </section>
+
+    <!-- ========== FOOTER ========== -->
+    <footer class="footer">
+        <div class="footer-container">
+            <div class="footer-brand">
+                <a href="index.html" class="logo">
+                    <span class="paw-icon">🐾</span> PawPals
+                </a>
+                <p>Making pets and their owners happy since 2020. Quality supplies for your furry family members.</p>
+            </div>
+            <div class="footer-column">
+                <h4>Quick Links</h4>
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="products.html">Products</a></li>
+                    <li><a href="about.html">About Us</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                </ul>
+            </div>
+            <div class="footer-column">
+                <h4>Support</h4>
+                <ul>
+                    <li><a href="contact.html">Help Center</a></li>
+                    <li><a href="contact.html">Shipping Info</a></li>
+                    <li><a href="contact.html">Returns</a></li>
+                    <li><a href="contact.html">FAQ</a></li>
+                </ul>
+            </div>
+            <div class="footer-column">
+                <h4>Follow Us</h4>
+                <div class="footer-social-icons">
+                    <a href="https://facebook.com" target="_blank" aria-label="Facebook"><img src="photo/facebook.png" alt="Facebook"></a>
+                    <a href="https://instagram.com" target="_blank" aria-label="Instagram"><img src="photo/instagram.png" alt="Instagram"></a>
+                    <a href="https://tiktok.com" target="_blank" aria-label="TikTok"><img src="photo/tiktok.png" alt="TikTok"></a>
+                </div>
+            </div>
+        </div>
+        <div class="footer-divider"></div>
+        <div class="footer-bottom">
+            <p>&copy; 2025 PawPals Pet Supply. All rights reserved.</p>
+            <div class="footer-bottom-links">
+                <a href="#">Privacy Policy</a>
+                <a href="#">Terms of Service</a>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>

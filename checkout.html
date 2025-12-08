@@ -1,0 +1,227 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PawPals Pet Supply - Checkout</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <!-- ========== HEADER NAVIGATION ========== -->
+    <header class="header">
+        <div class="header-container">
+            <a href="index.html" class="logo">
+                <span class="paw-icon">🐾</span> PawPals
+            </a>
+            <button class="hamburger" aria-label="Toggle menu">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+            <nav class="nav">
+                <ul class="nav-list">
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="products.html">Products</a></li>
+                    <li><a href="about.html">About Us</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                    <li><a href="login.html">Login</a></li>
+                    <li>
+                        <a href="cart.html" class="cart-link">
+                            <span class="cart-icon">🛒</span>
+                            <span class="cart-count">0</span>
+                        </a>
+                    </li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <!-- ========== PAGE HEADER ========== -->
+    <section class="page-header">
+        <h1>Checkout <span class="paw-icon">🐾</span></h1>
+        <p>Complete your order</p>
+    </section>
+
+    <!-- ========== CHECKOUT CONTENT ========== -->
+    <section class="checkout-page">
+        <div class="checkout-container">
+            <!-- Checkout Form -->
+            <div class="checkout-form-container">
+                <form id="checkoutForm" class="checkout-form">
+                    <!-- Shipping Information -->
+                    <div class="form-section">
+                        <h3>Shipping Information</h3>
+                        <div class="form-row">
+                            <div class="form-group">
+                                <label for="firstName">First Name *</label>
+                                <input type="text" id="firstName" required>
+                                <span class="error-message" id="firstNameError"></span>
+                            </div>
+                            <div class="form-group">
+                                <label for="lastName">Last Name *</label>
+                                <input type="text" id="lastName" required>
+                                <span class="error-message" id="lastNameError"></span>
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label for="email">Email *</label>
+                            <input type="email" id="email" required>
+                            <span class="error-message" id="emailError"></span>
+                        </div>
+                        <div class="form-group">
+                            <label for="phone">Phone Number *</label>
+                            <input type="tel" id="phone" required>
+                            <span class="error-message" id="phoneError"></span>
+                        </div>
+                        <div class="form-group">
+                            <label for="address">Street Address *</label>
+                            <input type="text" id="address" required>
+                            <span class="error-message" id="addressError"></span>
+                        </div>
+                        <div class="form-row">
+                            <div class="form-group">
+                                <label for="city">City *</label>
+                                <input type="text" id="city" required>
+                                <span class="error-message" id="cityError"></span>
+                            </div>
+                            <div class="form-group">
+                                <label for="state">State *</label>
+                                <input type="text" id="state" required>
+                                <span class="error-message" id="stateError"></span>
+                            </div>
+                            <div class="form-group">
+                                <label for="zip">ZIP Code *</label>
+                                <input type="text" id="zip" required>
+                                <span class="error-message" id="zipError"></span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Payment Information -->
+                    <div class="form-section">
+                        <h3>Payment Information</h3>
+                        <p class="payment-note">This is a demo checkout - no real payment will be processed.</p>
+                        <div class="form-group">
+                            <label for="cardName">Name on Card *</label>
+                            <input type="text" id="cardName" required>
+                            <span class="error-message" id="cardNameError"></span>
+                        </div>
+                        <div class="form-group">
+                            <label for="cardNumber">Card Number *</label>
+                            <input type="text" id="cardNumber" placeholder="1234 5678 9012 3456" maxlength="19" required>
+                            <span class="error-message" id="cardNumberError"></span>
+                        </div>
+                        <div class="form-row">
+                            <div class="form-group">
+                                <label for="expiry">Expiry Date *</label>
+                                <input type="text" id="expiry" placeholder="MM/YY" maxlength="5" required>
+                                <span class="error-message" id="expiryError"></span>
+                            </div>
+                            <div class="form-group">
+                                <label for="cvv">CVV *</label>
+                                <input type="text" id="cvv" placeholder="123" maxlength="4" required>
+                                <span class="error-message" id="cvvError"></span>
+                            </div>
+                        </div>
+                        <div class="card-icons">
+                            <span>We accept:</span>
+                            <img src="photo/visa.jpg" alt="Visa" class="payment-icon">
+                            <img src="photo/master.png" alt="Mastercard" class="payment-icon">
+                            <img src="photo/unionpay.png" alt="UnionPay" class="payment-icon">
+                        </div>
+                    </div>
+
+                    <button type="submit" class="btn btn-primary place-order-btn">Place Order</button>
+                </form>
+            </div>
+
+            <!-- Order Summary Sidebar -->
+            <div class="checkout-summary">
+                <h3>Order Summary</h3>
+                <div class="checkout-items" id="checkoutItems">
+                    <!-- Items will be dynamically inserted -->
+                </div>
+                <div class="summary-divider"></div>
+                <div class="summary-row">
+                    <span>Subtotal</span>
+                    <span id="checkoutSubtotal">0 THB</span>
+                </div>
+                <div class="summary-row">
+                    <span>Shipping</span>
+                    <span id="checkoutShipping">209 THB</span>
+                </div>
+                <div class="summary-row">
+                    <span>Tax (8%)</span>
+                    <span id="checkoutTax">0 THB</span>
+                </div>
+                <div class="summary-row total">
+                    <span>Total</span>
+                    <span id="checkoutTotal">0 THB</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Order Success Modal -->
+    <div class="modal-overlay" id="successModal">
+        <div class="modal success-modal">
+            <div class="success-content">
+                <div class="success-icon">🎉</div>
+                <h2>Order Placed Successfully!</h2>
+                <p>Thank you for shopping with PawPals!</p>
+                <p class="order-number">Order #: <span id="orderNumber"></span></p>
+                <p>A confirmation email has been sent to your inbox.</p>
+                <a href="index.html" class="btn btn-primary">Return to Home</a>
+            </div>
+        </div>
+    </div>
+
+    <!-- ========== FOOTER ========== -->
+    <footer class="footer">
+        <div class="footer-container">
+            <div class="footer-brand">
+                <a href="index.html" class="logo">
+                    <span class="paw-icon">🐾</span> PawPals
+                </a>
+                <p>Making pets and their owners happy since 2020. Quality supplies for your furry family members.</p>
+            </div>
+            <div class="footer-column">
+                <h4>Quick Links</h4>
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="products.html">Products</a></li>
+                    <li><a href="about.html">About Us</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                </ul>
+            </div>
+            <div class="footer-column">
+                <h4>Support</h4>
+                <ul>
+                    <li><a href="contact.html">Help Center</a></li>
+                    <li><a href="contact.html">Shipping Info</a></li>
+                    <li><a href="contact.html">Returns</a></li>
+                    <li><a href="contact.html">FAQ</a></li>
+                </ul>
+            </div>
+            <div class="footer-column">
+                <h4>Follow Us</h4>
+                <div class="footer-social-icons">
+                    <a href="https://facebook.com" target="_blank" aria-label="Facebook"><img src="photo/facebook.png" alt="Facebook"></a>
+                    <a href="https://instagram.com" target="_blank" aria-label="Instagram"><img src="photo/instagram.png" alt="Instagram"></a>
+                    <a href="https://tiktok.com" target="_blank" aria-label="TikTok"><img src="photo/tiktok.png" alt="TikTok"></a>
+                </div>
+            </div>
+        </div>
+        <div class="footer-divider"></div>
+        <div class="footer-bottom">
+            <p>&copy; 2025 PawPals Pet Supply. All rights reserved.</p>
+            <div class="footer-bottom-links">
+                <a href="#">Privacy Policy</a>
+                <a href="#">Terms of Service</a>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>

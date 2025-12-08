@@ -1,0 +1,255 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PawPals Pet Supply - Products</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <!-- ========== HEADER NAVIGATION ========== -->
+    <header class="header">
+        <div class="header-container">
+            <a href="index.html" class="logo">
+                <span class="paw-icon">🐾</span> PawPals
+            </a>
+            <button class="hamburger" aria-label="Toggle menu">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+            <nav class="nav">
+                <ul class="nav-list">
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="products.html" class="active">Products</a></li>
+                    <li><a href="about.html">About Us</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                    <li><a href="login.html">Login</a></li>
+                    <!-- Added cart link -->
+                    <li>
+                        <a href="cart.html" class="cart-link">
+                            <span class="cart-icon">🛒</span>
+                            <span class="cart-count">0</span>
+                        </a>
+                    </li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <!-- ========== PAGE HEADER ========== -->
+    <section class="page-header">
+        <h1>Our Products <span class="paw-icon">🐾</span></h1>
+        <p>Discover the best supplies for your furry friends</p>
+    </section>
+
+    <!-- ========== PRODUCTS GRID ========== -->
+    <section class="products-page">
+        <div class="products-grid-full">
+            <!-- Added data attributes for product details and click handler -->
+            <!-- Product 1: Soft Chew Toy -->
+            <div class="product-card" 
+                 data-id="1"
+                 data-name="PawPals Soft Chew Toy" 
+                 data-price="450" 
+                 data-image="https://images.unsplash.com/photo-1591946614720-90a587da4a36?w=300&h=300&fit=crop"
+                 data-description="Durable yet gentle plush toy perfect for dogs who love to chew. Made with reinforced stitching and squeaker inside for endless fun!"
+                 data-details="Material: Premium plush fabric with reinforced stitching. Features built-in squeaker. Size: Medium (8 inches). Suitable for small to medium dogs. Machine washable.">
+                <div class="product-image-wrapper">
+                    <img src="https://images.unsplash.com/photo-1591946614720-90a587da4a36?w=300&h=300&fit=crop" alt="PawPals Soft Chew Toy">
+                    <div class="product-overlay">
+                        <span>Click for details</span>
+                    </div>
+                </div>
+                <h3>PawPals Soft Chew Toy</h3>
+                <p class="product-description">Durable yet gentle plush toy perfect for dogs who love to chew.</p>
+                <p class="price">450 THB</p>
+                <button class="btn btn-primary add-to-cart">Add to Cart</button>
+            </div>
+
+            <!-- Product 2: Feather Wand -->
+            <div class="product-card" 
+                 data-id="2"
+                 data-name="FluffyCat Feather Wand" 
+                 data-price="349" 
+                 data-image="https://images.unsplash.com/photo-1545249390-6bdfa286032f?w=300&h=300&fit=crop"
+                 data-description="Interactive feather wand that brings out your cat's natural hunting instincts."
+                 data-details="Length: 16 inches with 24-inch string. Features colorful feathers and bells. Ergonomic handle for comfortable play. Replacement feathers available. Great for bonding with your cat!">
+                <div class="product-image-wrapper">
+                    <img src="https://images.unsplash.com/photo-1545249390-6bdfa286032f?w=300&h=300&fit=crop" alt="FluffyCat Feather Wand">
+                    <div class="product-overlay">
+                        <span>Click for details</span>
+                    </div>
+                </div>
+                <h3>FluffyCat Feather Wand</h3>
+                <p class="product-description">Interactive feather wand that brings out your cat's natural hunting instincts.</p>
+                <p class="price">349 THB</p>
+                <button class="btn btn-primary add-to-cart">Add to Cart</button>
+            </div>
+
+            <!-- Product 3: Comfort Harness -->
+            <div class="product-card" 
+                 data-id="3"
+                 data-name="No-Pull Comfort Harness" 
+                 data-price="1049" 
+                 data-image="https://images.unsplash.com/photo-1601758228041-f3b2795255f1?w=300&h=300&fit=crop"
+                 data-description="Ergonomic harness designed to prevent pulling without causing discomfort."
+                 data-details="Available sizes: XS, S, M, L, XL. Adjustable chest and belly straps. Padded chest plate for comfort. Reflective strips for night visibility. Leash attachment on back. Easy to put on and take off.">
+                <div class="product-image-wrapper">
+                    <img src="https://images.unsplash.com/photo-1601758228041-f3b2795255f1?w=300&h=300&fit=crop" alt="No-Pull Comfort Harness">
+                    <div class="product-overlay">
+                        <span>Click for details</span>
+                    </div>
+                </div>
+                <h3>No-Pull Comfort Harness</h3>
+                <p class="product-description">Ergonomic harness designed to prevent pulling without causing discomfort.</p>
+                <p class="price">1049 THB</p>
+                <button class="btn btn-primary add-to-cart">Add to Cart</button>
+            </div>
+
+            <!-- Product 4: Organic Treats -->
+            <div class="product-card" 
+                 data-id="4"
+                 data-name="Organic Chicken Treats" 
+                 data-price="315" 
+                 data-image="https://images.unsplash.com/photo-1568640347023-a616a30bc3bd?w=300&h=300&fit=crop"
+                 data-description="All-natural, grain-free chicken treats made from free-range chicken."
+                 data-details="Ingredients: 100% free-range chicken breast. No artificial preservatives, colors, or flavors. Grain-free and gluten-free. Weight: 6oz bag (approximately 30 treats). Suitable for dogs of all ages and sizes.">
+                <div class="product-image-wrapper">
+                    <img src="https://images.unsplash.com/photo-1568640347023-a616a30bc3bd?w=300&h=300&fit=crop" alt="Organic Chicken Treats">
+                    <div class="product-overlay">
+                        <span>Click for details</span>
+                    </div>
+                </div>
+                <h3>Organic Chicken Treats</h3>
+                <p class="product-description">All-natural, grain-free chicken treats made from free-range chicken.</p>
+                <p class="price">315 THB</p>
+                <button class="btn btn-primary add-to-cart">Add to Cart</button>
+            </div>
+
+            <!-- Product 5: Pet Bed -->
+            <div class="product-card" 
+                 data-id="5"
+                 data-name="CozySleep Pet Bed" 
+                 data-price="1599" 
+                 data-image="https://images.unsplash.com/photo-1541781774459-bb2af2f05b55?w=300&h=300&fit=crop"
+                 data-description="Ultra-soft memory foam bed with raised edges for security."
+                 data-details="Dimensions: 28 x 22 x 7 inches. Memory foam base for orthopedic support. Raised edges for head and neck support. Machine washable removable cover. Available in Pink, Mint, and Lavender. Suitable for pets up to 40 lbs.">
+                <div class="product-image-wrapper">
+                    <img src="https://images.unsplash.com/photo-1541781774459-bb2af2f05b55?w=300&h=300&fit=crop" alt="CozySleep Pet Bed">
+                    <div class="product-overlay">
+                        <span>Click for details</span>
+                    </div>
+                </div>
+                <h3>CozySleep Pet Bed</h3>
+                <p class="product-description">Ultra-soft memory foam bed with raised edges for security.</p>
+                <p class="price">1599 THB</p>
+                <button class="btn btn-primary add-to-cart">Add to Cart</button>
+            </div>
+
+            <!-- Product 6: Water Bottle -->
+            <div class="product-card" 
+                 data-id="6"
+                 data-name="Travel Water Bottle" 
+                 data-price="559" 
+                 data-image="https://images.unsplash.com/photo-1583337130417-3346a1be7dee?w=300&h=300&fit=crop"
+                 data-description="Portable water bottle with built-in bowl for on-the-go hydration."
+                 data-details="Capacity: 500ml. Leak-proof design with one-hand operation. Built-in foldable bowl. BPA-free food-grade plastic. Includes carabiner for easy carrying. Perfect for walks, hikes, and travel.">
+                <div class="product-image-wrapper">
+                    <img src="https://images.unsplash.com/photo-1583337130417-3346a1be7dee?w=300&h=300&fit=crop" alt="Travel Water Bottle for Pets">
+                    <div class="product-overlay">
+                        <span>Click for details</span>
+                    </div>
+                </div>
+                <h3>Travel Water Bottle</h3>
+                <p class="product-description">Portable water bottle with built-in bowl for on-the-go hydration.</p>
+                <p class="price">559 THB</p>
+                <button class="btn btn-primary add-to-cart">Add to Cart</button>
+            </div>
+        </div>
+    </section>
+
+    <!-- Added product detail modal -->
+    <div class="modal-overlay" id="productModal">
+        <div class="modal">
+            <button class="modal-close" id="modalClose">&times;</button>
+            <div class="modal-content">
+                <div class="modal-image">
+                    <img id="modalImage" src="/placeholder.svg" alt="">
+                </div>
+                <div class="modal-details">
+                    <h2 id="modalName"></h2>
+                    <p class="modal-price" id="modalPrice"></p>
+                    <p class="modal-description" id="modalDescription"></p>
+                    <div class="modal-specs">
+                        <h4>Product Details</h4>
+                        <p id="modalSpecs"></p>
+                    </div>
+                    <div class="modal-quantity">
+                        <label for="quantity">Quantity:</label>
+                        <div class="quantity-selector">
+                            <button class="qty-btn" id="qtyMinus">-</button>
+                            <input type="number" id="quantity" value="1" min="1" max="10">
+                            <button class="qty-btn" id="qtyPlus">+</button>
+                        </div>
+                    </div>
+                    <button class="btn btn-primary modal-add-to-cart" id="modalAddToCart">Add to Cart</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- ========== PAW DIVIDER ========== -->
+    <div class="paw-divider">
+        <span>🐾</span><span>🐾</span><span>🐾</span>
+    </div>
+
+    <!-- ========== FOOTER ========== -->
+    <footer class="footer">
+        <div class="footer-container">
+            <div class="footer-brand">
+                <a href="index.html" class="logo">
+                    <span class="paw-icon">🐾</span> PawPals
+                </a>
+                <p>Making pets and their owners happy since 2020. Quality supplies for your furry family members.</p>
+            </div>
+            <div class="footer-column">
+                <h4>Quick Links</h4>
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="products.html">Products</a></li>
+                    <li><a href="about.html">About Us</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                </ul>
+            </div>
+            <div class="footer-column">
+                <h4>Support</h4>
+                <ul>
+                    <li><a href="contact.html">Help Center</a></li>
+                    <li><a href="contact.html">Shipping Info</a></li>
+                    <li><a href="contact.html">Returns</a></li>
+                    <li><a href="contact.html">FAQ</a></li>
+                </ul>
+            </div>
+            <div class="footer-column">
+                <h4>Follow Us</h4>
+                <div class="footer-social-icons">
+                    <a href="https://facebook.com" target="_blank" aria-label="Facebook"><img src="photo/facebook.png" alt="Facebook"></a>
+                    <a href="https://instagram.com" target="_blank" aria-label="Instagram"><img src="photo/instagram.png" alt="Instagram"></a>
+                    <a href="https://tiktok.com" target="_blank" aria-label="TikTok"><img src="photo/tiktok.png" alt="TikTok"></a>
+                </div>
+            </div>
+        </div>
+        <div class="footer-divider"></div>
+        <div class="footer-bottom">
+            <p>&copy; 2025 PawPals Pet Supply. All rights reserved.</p>
+            <div class="footer-bottom-links">
+                <a href="#">Privacy Policy</a>
+                <a href="#">Terms of Service</a>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
