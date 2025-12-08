@@ -1461,6 +1461,33 @@ img {
     position: static;
     margin-top: 2rem;
   }
+  .cart-item {
+    grid-template-columns: 1fr;
+    grid-template-rows: auto auto auto;
+    gap: 1rem;
+    text-align: center;
+    justify-items: center;
+    align-items: start;
+    padding: 1rem;
+  }
+  .cart-item img {
+    margin: 0 auto 1rem auto;
+  }
+  .cart-item-details {
+    margin-bottom: 0.5rem;
+  }
+  .cart-item-actions {
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    gap: 1rem;
+  }
+  .cart-item-actions .quantity-selector {
+    margin-bottom: 0;
+  }
+  .remove-item {
+    margin-left: 1rem;
+  }
 }
 
 /* ========== MOBILE NAVIGATION FIX ========== */
