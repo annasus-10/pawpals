@@ -37,7 +37,7 @@ A modern, responsive e-commerce website for pet supplies built with HTML, CSS, a
 
 ## Live Demo
 
-Visit the live site at: [Your GitHub Pages URL will be here]
+🌐 **Visit the live site at:** [https://annasus-10.github.io/pawpals/](https://annasus-10.github.io/pawpals/)
 
 ## Local Development
 
