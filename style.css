@@ -1463,6 +1463,41 @@ img {
   }
 }
 
+/* ========== MOBILE NAVIGATION FIX ========== */
+@media (max-width: 700px) {
+  .hamburger {
+    display: flex;
+  }
+  .nav {
+    width: 100%;
+  }
+  .nav-list {
+    display: none;
+    flex-direction: column;
+    gap: 0.5rem;
+    background: var(--white);
+    position: absolute;
+    top: 60px;
+    left: 0;
+    width: 100vw;
+    box-shadow: 0 2px 10px var(--shadow);
+    padding: 1rem 0;
+    z-index: 999;
+  }
+  .nav.active .nav-list {
+    display: flex;
+  }
+  .nav-list a {
+    padding: 1rem 2rem;
+    border-radius: 0;
+    font-size: 1.1rem;
+    border-bottom: 1px solid var(--light-gray);
+  }
+  .nav-list a:last-child {
+    border-bottom: none;
+  }
+}
+
 @media (max-width: 500px) {
   .header-container {
     padding: 0.5rem;
