@@ -1,10 +1,14 @@
 /* ========================================
    PAWPALS PET SUPPLY - MAIN STYLESHEET
    Cute minimalist design with pastel colors
+   ----------------------------------------
+   This file contains all styles for layout,
+   colors, components, and responsive design.
 ======================================== */
 
 /* ========== CSS VARIABLES ========== */
 :root {
+  /* Theme color variables and layout settings */
   --pink: #f8d9e0;
   --mint: #c8e8ca;
   --lavender: #e1d4f7;
@@ -19,16 +23,19 @@
 
 /* ========== RESET & BASE STYLES ========== */
 * {
+  /* Remove default margin, padding, and set box-sizing */
   margin: 0;
   padding: 0;
   box-sizing: border-box;
 }
 
 html {
+  /* Enable smooth scrolling for anchor links */
   scroll-behavior: smooth;
 }
 
 body {
+  /* Main font and background color for the site */
   font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
   color: var(--charcoal);
   line-height: 1.6;
@@ -36,16 +43,19 @@ body {
 }
 
 a {
+  /* Remove underline and add transition to links */
   text-decoration: none;
   color: inherit;
   transition: var(--transition);
 }
 
 ul {
+  /* Remove default list styles */
   list-style: none;
 }
 
 img {
+  /* Responsive images */
   max-width: 100%;
   height: auto;
   display: block;
@@ -53,6 +63,7 @@ img {
 
 /* ========== HEADER & NAVIGATION ========== */
 .header {
+  /* Header bar with sticky navigation and shadow */
   background-color: var(--white);
   box-shadow: 0 2px 10px var(--shadow);
   position: sticky;
@@ -61,6 +72,7 @@ img {
 }
 
 .header-container {
+  /* Container for header content and navigation */
   max-width: 1200px;
   margin: 0 auto;
   padding: 1rem 2rem;
@@ -70,6 +82,7 @@ img {
 }
 
 .logo {
+  /* Logo styles for brand name and icon */
   font-size: 1.8rem;
   font-weight: 700;
   color: var(--charcoal);
@@ -79,19 +92,23 @@ img {
 }
 
 .logo:hover {
+  /* Logo hover effect */
   color: #e8919e;
 }
 
 .paw-icon {
+  /* Paw icon size */
   font-size: 1.5rem;
 }
 
 .nav-list {
+  /* Navigation list layout */
   display: flex;
   gap: 2rem;
 }
 
 .nav-list a {
+  /* Navigation link styles */
   font-weight: 500;
   padding: 0.5rem 1rem;
   border-radius: var(--border-radius);
@@ -100,12 +117,14 @@ img {
 
 .nav-list a:hover,
 .nav-list a.active {
+  /* Highlight active and hovered nav links */
   background-color: var(--pink);
   color: var(--charcoal);
 }
 
 /* Hamburger Menu */
 .hamburger {
+  /* Hamburger menu button for mobile */
   display: none;
   flex-direction: column;
   gap: 5px;
@@ -116,6 +135,7 @@ img {
 }
 
 .hamburger span {
+  /* Hamburger menu bar styles */
   width: 25px;
   height: 3px;
   background-color: var(--charcoal);
@@ -124,19 +144,23 @@ img {
 }
 
 .hamburger.active span:nth-child(1) {
+  /* Hamburger menu animation: top bar */
   transform: rotate(45deg) translate(5px, 5px);
 }
 
 .hamburger.active span:nth-child(2) {
+  /* Hamburger menu animation: middle bar */
   opacity: 0;
 }
 
 .hamburger.active span:nth-child(3) {
+  /* Hamburger menu animation: bottom bar */
   transform: rotate(-45deg) translate(7px, -6px);
 }
 
 /* ========== HERO SECTION ========== */
 .hero {
+  /* Hero section with main message and images */
   display: flex;
   align-items: center;
   justify-content: space-between;
@@ -149,28 +173,33 @@ img {
 }
 
 .hero-content {
+  /* Hero text content styles */
   flex: 1;
 }
 
 .hero-content h1 {
+  /* Hero headline styles */
   font-size: 3rem;
   margin-bottom: 1rem;
   line-height: 1.2;
 }
 
 .hero-content p {
+  /* Hero description text */
   font-size: 1.2rem;
   margin-bottom: 2rem;
   color: #555;
 }
 
 .hero-images {
+  /* Layout for hero images */
   flex: 1;
   display: flex;
   gap: 1rem;
 }
 
 .hero-images img {
+  /* Hero image styles */
   border-radius: var(--border-radius);
   box-shadow: 0 10px 30px var(--shadow);
   width: 200px;
@@ -179,11 +208,13 @@ img {
 }
 
 .hero-images img:nth-child(2) {
+  /* Offset second hero image for effect */
   margin-top: 2rem;
 }
 
 /* ========== BUTTONS ========== */
 .btn {
+  /* Base button styles */
   display: inline-block;
   padding: 0.8rem 2rem;
   border-radius: 50px;
@@ -195,22 +226,26 @@ img {
 }
 
 .btn-primary {
+  /* Primary button styles */
   background-color: var(--mint);
   color: var(--charcoal);
 }
 
 .btn-primary:hover {
+  /* Primary button hover effect */
   background-color: #a8d8aa;
   transform: translateY(-3px);
   box-shadow: 0 5px 15px var(--shadow);
 }
 
 .btn-secondary {
+  /* Secondary button styles */
   background-color: var(--peach);
   color: var(--charcoal);
 }
 
 .btn-secondary:hover {
+  /* Secondary button hover effect */
   background-color: #ffd9a8;
   transform: translateY(-3px);
   box-shadow: 0 5px 15px var(--shadow);
@@ -218,6 +253,7 @@ img {
 
 /* ========== PAW DIVIDER ========== */
 .paw-divider {
+  /* Decorative paw divider section */
   text-align: center;
   padding: 2rem;
   font-size: 2rem;
@@ -227,18 +263,22 @@ img {
 }
 
 .paw-divider span {
+  /* Paw icon bounce animation */
   animation: bounce 1s ease infinite;
 }
 
 .paw-divider span:nth-child(2) {
+  /* Animation delay for second paw */
   animation-delay: 0.2s;
 }
 
 .paw-divider span:nth-child(3) {
+  /* Animation delay for third paw */
   animation-delay: 0.4s;
 }
 
 @keyframes bounce {
+  /* Keyframes for paw bounce animation */
   0%,
   100% {
     transform: translateY(0);
@@ -250,6 +290,7 @@ img {
 
 /* ========== FEATURES SECTION ========== */
 .features {
+  /* Features section layout */
   max-width: 1200px;
   margin: 0 auto;
   padding: 4rem 2rem;
@@ -257,17 +298,20 @@ img {
 }
 
 .features h2 {
+  /* Features section headline */
   font-size: 2.5rem;
   margin-bottom: 3rem;
 }
 
 .features-grid {
+  /* Grid layout for feature cards */
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
   gap: 2rem;
 }
 
 .feature-card {
+  /* Individual feature card styles */
   background-color: var(--light-gray);
   padding: 2rem;
   border-radius: var(--border-radius);
@@ -275,26 +319,32 @@ img {
 }
 
 .feature-card:hover {
+  /* Feature card hover effect */
   transform: translateY(-5px);
   box-shadow: 0 10px 30px var(--shadow);
 }
 
 .feature-card:nth-child(1) {
+  /* Pink background for first feature card */
   background-color: var(--pink);
 }
 .feature-card:nth-child(2) {
+  /* Mint background for second feature card */
   background-color: var(--mint);
 }
 .feature-card:nth-child(3) {
+  /* Lavender background for third feature card */
   background-color: var(--lavender);
 }
 
 .feature-icon {
+  /* Feature icon size */
   font-size: 3rem;
   margin-bottom: 1rem;
 }
 
 .feature-card h3 {
+  /* Feature card headline */
   font-size: 1.5rem;
   margin-bottom: 0.5rem;
 }
@@ -1338,6 +1388,113 @@ img {
 
 .footer-bottom-links a:hover {
   color: var(--mint);
+}
+
+/* ========== RESPONSIVE MAIN LAYOUT ========== */
+@media (max-width: 900px) {
+  .header-container {
+    flex-direction: column;
+    gap: 1rem;
+    padding: 1rem;
+  }
+  .nav-list {
+    gap: 1rem;
+  }
+  .hero {
+    flex-direction: column;
+    padding: 2rem 1rem;
+    gap: 2rem;
+  }
+  .features {
+    padding: 2rem 1rem;
+  }
+  .product-highlights {
+    padding: 2rem 1rem;
+  }
+  .products-page {
+    padding: 2rem 1rem;
+  }
+}
+
+@media (max-width: 700px) {
+  .nav-list {
+    flex-direction: column;
+    gap: 0.5rem;
+    align-items: flex-start;
+  }
+  .header-container {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+  .hero {
+    flex-direction: column;
+    gap: 1rem;
+    padding: 1rem;
+  }
+  .hero-images {
+    flex-direction: column;
+    gap: 1rem;
+    width: 100%;
+  }
+  .hero-images img {
+    width: 100%;
+    height: 180px;
+  }
+  .features-grid,
+  .products-grid,
+  .products-grid-full,
+  .why-grid,
+  .team-grid {
+    grid-template-columns: 1fr;
+    gap: 1rem;
+  }
+  .product-card img {
+    height: 140px;
+  }
+  .cart-items-wrapper,
+  .checkout-container {
+    grid-template-columns: 1fr;
+    gap: 1rem;
+  }
+  .cart-summary,
+  .checkout-summary {
+    position: static;
+    margin-top: 2rem;
+  }
+}
+
+@media (max-width: 500px) {
+  .header-container {
+    padding: 0.5rem;
+  }
+  .logo {
+    font-size: 1.2rem;
+  }
+  .hero-content h1 {
+    font-size: 2rem;
+  }
+  .features h2,
+  .product-highlights h2,
+  .page-header h1 {
+    font-size: 1.5rem;
+  }
+  .btn,
+  .btn-primary,
+  .btn-secondary {
+    font-size: 0.9rem;
+    padding: 0.5rem 1rem;
+  }
+  .product-card img {
+    height: 100px;
+  }
+  .cart-item img,
+  .checkout-item img {
+    width: 60px;
+    height: 60px;
+  }
+  .modal-image img {
+    height: 180px;
+  }
 }
 
 /* ========== RESPONSIVE FOOTER ========== */
