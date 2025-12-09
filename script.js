@@ -19,16 +19,19 @@ document.addEventListener("DOMContentLoaded", () => {
 })
 
 // ========== CART MANAGEMENT ==========
+// Get cart items from localStorage
 function getCart() {
   const cart = localStorage.getItem("pawpalsCart")
   return cart ? JSON.parse(cart) : []
 }
 
+// Save cart items to localStorage and update cart count
 function saveCart(cart) {
   localStorage.setItem("pawpalsCart", JSON.stringify(cart))
   updateCartCount()
 }
 
+// Update the cart item count displayed in the UI
 function updateCartCount() {
   const cart = getCart()
   const totalItems = cart.reduce((sum, item) => sum + item.quantity, 0)
@@ -38,6 +41,7 @@ function updateCartCount() {
   })
 }
 
+// Add a product to the cart or update its quantity
 function addToCart(product, quantity = 1) {
   const cart = getCart()
   const existingItem = cart.find((item) => item.id === product.id)
@@ -52,6 +56,7 @@ function addToCart(product, quantity = 1) {
   return cart
 }
 
+// Remove a product from the cart by its ID
 function removeFromCart(productId) {
   let cart = getCart()
   cart = cart.filter((item) => item.id !== productId)
@@ -59,6 +64,7 @@ function removeFromCart(productId) {
   return cart
 }
 
+// Update the quantity of a specific cart item
 function updateCartItemQuantity(productId, quantity) {
   const cart = getCart()
   const item = cart.find((item) => item.id === productId)
@@ -70,6 +76,7 @@ function updateCartItemQuantity(productId, quantity) {
 }
 
 // ========== HAMBURGER MENU ==========
+// Initialize hamburger menu for mobile navigation
 function initHamburgerMenu() {
   const hamburger = document.querySelector(".hamburger")
   const nav = document.querySelector(".nav")
@@ -91,6 +98,7 @@ function initHamburgerMenu() {
 }
 
 // ========== PRODUCT MODAL ==========
+// Initialize product detail modal and its interactions
 function initProductModal() {
   const productCards = document.querySelectorAll(".product-card")
   const modal = document.getElementById("productModal")
@@ -144,6 +152,7 @@ function initProductModal() {
     }
   })
 
+  // Close the product modal
   function closeModal() {
     modal.classList.remove("active")
     document.body.style.overflow = ""
@@ -186,6 +195,7 @@ function initProductModal() {
 }
 
 // ========== ADD TO CART BUTTONS ==========
+// Set up 'Add to Cart' button event listeners for products
 function initAddToCartButtons() {
   const addToCartButtons = document.querySelectorAll(".product-card .add-to-cart")
 
@@ -217,6 +227,7 @@ function initAddToCartButtons() {
 }
 
 // ========== CART PAGE ==========
+// Initialize the cart page and render cart items
 function initCartPage() {
   const cartEmpty = document.getElementById("cartEmpty")
   const cartItemsWrapper = document.getElementById("cartItemsWrapper")
@@ -226,6 +237,7 @@ function initCartPage() {
 
   renderCart()
 
+  // Render cart items and set up their event listeners
   function renderCart() {
     const cart = getCart()
 
@@ -298,6 +310,7 @@ function initCartPage() {
     updateCartSummary(cart)
   }
 
+  // Update cart summary totals (subtotal, shipping, tax, total)
   function updateCartSummary(cart) {
     const subtotal = cart.reduce((sum, item) => sum + item.price * item.quantity, 0)
     const shipping = subtotal >= 1750 ? 0 : 209
@@ -312,6 +325,7 @@ function initCartPage() {
 }
 
 // ========== CHECKOUT PAGE ==========
+// Initialize the checkout page and its form logic
 function initCheckoutPage() {
   const checkoutForm = document.getElementById("checkoutForm")
   const checkoutItems = document.getElementById("checkoutItems")
@@ -361,6 +375,7 @@ function initCheckoutPage() {
     }
   })
 
+  // Render checkout items and summary
   function renderCheckoutItems() {
     const cart = getCart()
 
@@ -395,6 +410,7 @@ function initCheckoutPage() {
     document.getElementById("checkoutTotal").textContent = `${Math.round(total)} THB`
   }
 
+  // Validate checkout form fields
   function validateCheckoutForm() {
     let isValid = true
     const fields = [
@@ -452,6 +468,7 @@ function initCheckoutPage() {
 }
 
 // ========== CONTACT FORM VALIDATION ==========
+// Initialize contact form validation and submission
 function initContactForm() {
   const contactForm = document.getElementById("contactForm")
 
@@ -500,6 +517,7 @@ function initContactForm() {
 }
 
 // ========== LOGIN FORM VALIDATION ==========
+// Initialize login form validation and submission
 function initLoginForm() {
   const loginForm = document.getElementById("loginForm")
 
@@ -541,6 +559,7 @@ function initLoginForm() {
 }
 
 // ========== SIGNUP FORM VALIDATION ==========
+// Initialize signup form validation and submission
 function initSignupForm() {
   const signupForm = document.getElementById("signupForm")
 
@@ -603,6 +622,7 @@ function initSignupForm() {
 }
 
 // ========== SMOOTH SCROLL ==========
+// Enable smooth scrolling for anchor links
 function initSmoothScroll() {
   document.querySelectorAll('a[href^="#"]').forEach((anchor) => {
     anchor.addEventListener("click", function (e) {
@@ -619,6 +639,7 @@ function initSmoothScroll() {
 }
 
 // ========== HELPER FUNCTIONS ==========
+// Show an error message for a form field
 function showError(elementId, message) {
   const errorElement = document.getElementById(elementId)
   if (errorElement) {
@@ -627,6 +648,7 @@ function showError(elementId, message) {
   }
 }
 
+// Hide all error messages for a given form type
 function hideAllErrors(formType) {
   let errorIds = []
 
@@ -650,6 +672,7 @@ function hideAllErrors(formType) {
   })
 }
 
+// Validate email format using regex
 function isValidEmail(email) {
   const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/
   return emailRegex.test(email)

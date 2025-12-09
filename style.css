@@ -1451,6 +1451,14 @@ img {
   .product-card img {
     height: 140px;
   }
+  .about-mission {
+    flex-direction: column;
+    text-align: center;
+    padding: 2rem 1rem;
+  }
+  .about-content {
+    text-align: center;
+  }
   .cart-items-wrapper,
   .checkout-container {
     grid-template-columns: 1fr;
@@ -1516,9 +1524,10 @@ img {
   }
   .nav-list a {
     padding: 1rem 2rem;
-    border-radius: 0;
+    border-radius: var(--border-radius);
     font-size: 1.1rem;
     border-bottom: 1px solid var(--light-gray);
+    margin: 0 1rem;
   }
   .nav-list a:last-child {
     border-bottom: none;
